@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
                            Transitions
 ---------------------------------------------------------------*/
@@ -13,29 +12,21 @@
 /*--------------------------------------------------------------
                            Animations
 ---------------------------------------------------------------*/
-@keyframes slide-up {
+@keyframes boosterPulse {
 	0% {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	100% {
+		transform: scale(1);
+		filter: drop-shadow(0 0 0px var(--booster-main));
 		opacity: 1;
-		transform: translateY(0);
 	}
-}
-
-@keyframes slide-up-delay {
-
-	0%,
 	50% {
-		opacity: 0;
-		transform: translateY(20px);
+		transform: scale(1.15);
+		filter: drop-shadow(0 0 2.5px var(--booster-main));
+		opacity: 0.9;
 	}
-
 	100% {
+		transform: scale(1);
+		filter: drop-shadow(0 0 0px var(--booster-main));
 		opacity: 1;
-		transform: translateY(0);
 	}
 }
 
@@ -43,35 +34,141 @@
 	0% {
 		transform: translateY(-100%);
 	}
-
 	100% {
 		transform: translateY(0%);
 	}
+
 }
+
+@keyframes hangUpMotion {
+	0%,
+	70%,
+	100% {
+		transform: rotate(-45deg);
+	}
+	10%,
+	60% {
+		transform: rotate(0deg);
+	}
+}
+
 
 @keyframes message-appear {
 	0% {
 		opacity: 0;
 		transform: translateX(-20px);
 	}
-
 	100% {
 		opacity: 1;
 		transform: translateX(0);
 	}
 }
 
+@keyframes moveLtR-gA {
+	0%,
+	100% {
+		transform: translateX(2.5px);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes moveLtR-rA {
+	0%,
+	100% {
+		transform: translateX(-2.5px);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+}
+
 @keyframes peopleListHoverEffect {
 	0% {
 		scale: 1;
-	} 100% {
+	}
+	100% {
 		scale: 1.01;
+	}
+}
+
+@keyframes rotate360deg {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes phoneRing {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(7.5deg);
+	}
+	20% {
+		transform: rotate(-7.5deg);
+	}
+	30% {
+		transform: rotate(7.5deg);
+	}
+	40% {
+		transform: rotate(-7.5deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	60% {
+		transform: rotate(-5deg);
+	}
+	70% {
+		transform: rotate(3deg);
+	}
+	80% {
+		transform: rotate(-3deg);
+	}
+	90% {
+		transform: rotate(1.5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-up-delay {
+	0%,
+	50% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
 /*--------------------------------------------------------------
                           Start Page
 ---------------------------------------------------------------*/
+
+/* Create Directmessage */
+.privateChannelRecipientsInviteButtonIconContainer__99e7c.iconWrapper__9293f.clickable__9293f:hover {
+	animation: rotate360deg 1s var(--ease-in-out);
+}
 
 /* Chats */
 .interactive_bf202d:hover,
@@ -87,11 +184,13 @@
 	transition: transform 0.5s ease-in-out;
 }
 
-.peopleListItem_cc6179, .itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984 {
+.peopleListItem_cc6179,
+.itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984 {
 	transition: transform 0.25s ease !important;
 }
 
-.peopleListItem_cc6179:hover, .itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984:hover {
+.peopleListItem_cc6179:hover,
+.itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984:hover {
 	transform: scale(1.01);
 }
 
@@ -104,17 +203,94 @@
 	transition: transform 0.25s ease;
 }
 
-.listItem__650eb:hover {
+/* Main Panel */
+.button__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645,
+.button__67645.redGlow__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645 {
+	transition: transform var(--transition-time) var(--ease-in-out);
+}
+
+.button__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645:hover,
+.button__67645.redGlow__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645:hover {
+	transform: scale(1.075) !important;
+}
+
+/*--------------------------------------------------------------
+                           Servers
+---------------------------------------------------------------*/
+
+/* Discord Top Navigation Action */
+.tutorialContainer__1f388 .listItem__650eb:hover > div:nth-child(2) {
+	transform: none;
+}
+
+/* Server Channels */
+.containerDefault_c69b6d,
+.listItem__650eb {
+	transition: transform var(--transition-time) var(--ease-in-out),
+				width var(--transition-time) var(--ease-in-out);
+}
+
+.containerDefault_c69b6d:hover {
+	transform: scale(1.05);
+	width: calc(100% - 5px);
+}
+
+/* Server List */
+.listItem__650eb > div:nth-child(2),
+.tutorialContainer__650eb .listItem__650eb .listItemWrapper__91816 {
+	transition: transform var(--transition-time) var(--ease-in-out) !important;
+}
+
+.listItem__650eb:hover > div:nth-child(2),
+.tutorialContainer__650eb:hover .listItem__650eb .listItemWrapper__91816 {
 	transform: scale(1.125);
 }
 
-.listItem__650eb:hover .pill_e5445c.wrapper__58105 {
-	left: 4px;
+/* Custom Tooltip */
+.content_ab8609 {
+	transition: max-height var(--transition-time) var(--ease-in-out);
 }
 
 /*--------------------------------------------------------------
                            Chats
 ---------------------------------------------------------------*/
+
+/* Hover Animation for DM entries */
+.channel-2QD9_O {
+	will-change: transform !important;
+	transition: transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+}
+
+.channel-2QD9_O:hover {
+	transform: translateX(10px) !important;
+}
+
+/* User joined */
+.iconSize__235ca[style*="8b9de960da063cb9.svg"] {
+	animation: moveLtR-gA 1s infinite;
+}
+
+/* User left */
+.iconSize__235ca[style*="53e42368b1409f1a.svg"] {
+	animation: moveLtR-rA 1s infinite;
+}
+
+/* Active Call */
+.iconSize__235ca[style*="61ccab047dad737a.svg"] {
+	animation: phoneRing 1s infinite;
+}
+
+/* Call History */
+.iconSize__235ca[style*="6f076a64de25de4b.svg"] {
+	animation: hangUpMotion 5s infinite;
+}
+
+/* Server Booster */
+.icon__9f20a {
+	animation: boosterPulse 1.2s ease-in-out infinite;
+	transform-origin: center;
+	color: var(--booster-main);
+}
 
 /* Chat Hover */
 .interactive_bf202d.interactive__972a0 {
@@ -134,16 +310,6 @@
 	animation: slide-up 0.6s var(--ease-out-back);
 }
 
-/* Hover Animation for DM entries */
-.channel-2QD9_O {
-	will-change: transform !important;
-	transition: transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1) !important;
-}
-
-.channel-2QD9_O:hover {
-	transform: translateX(10px) !important;
-}
-
 /* Call */
 .wrapper_cb9592.minimum_cb9592 {
 	animation: callTransformIn 0.125s ease;
@@ -153,22 +319,4 @@
 .messageListItem__5126c {
 	transform-origin: center left;
 	animation: message-appear 0.3s var(--ease-out-back);
-}
-
-/*--------------------------------------------------------------  
-                      Third Party Contents
-
- Please note that third-party content can be updated or deleted
-   at any time. ModernAnimations has no control over this and
- reserves the right not to change or remove certain or specific
-                           content.
----------------------------------------------------------------*/
-
-/* ReadAllNotificationsButton */
-.vc-ranb-button.button__201d5.lookBlank__201d5.sizeMin__201d5.grow__201d5 {
-	transition: transform var(--transition-time) var(--ease-in-out);
-}
-
-.vc-ranb-button.button__201d5.lookBlank__201d5.sizeMin__201d5.grow__201d5:hover {
-	transform: scale(1.05);
 }

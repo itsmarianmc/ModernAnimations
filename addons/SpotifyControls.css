@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+                        SpotifyControls
+---------------------------------------------------------------*/
+
+/* Progress Bar */
+.barFill_a562c8 {
+	transition: width var(--transition-time) var(--ease-in-out);
+}
+
+/* Grabber for Progress bar*/
+.grabber_a562c8 {
+	cursor: grab;
+}
+
+/* Buttons and Cover */
+.vc-spotify-button,
+#vc-spotify-album-image {
+	transition: transform var(--transition-time) var(--ease-in-out);
+}
+
+.vc-spotify-button:hover,
+#vc-spotify-album-image:hover {
+	transform: scale(1.075) !important;
+}

@@ -1,0 +1,11 @@
+/*--------------------------------------------------------------
+                   ReadAllNotificationsButton
+---------------------------------------------------------------*/
+
+.vc-ranb-button.button__201d5.lookBlank__201d5.sizeMin__201d5.grow__201d5 {
+	transition: transform var(--transition-time) var(--ease-in-out);
+}
+
+.vc-ranb-button.button__201d5.lookBlank__201d5.sizeMin__201d5.grow__201d5:hover {
+	transform: scale(1.05);
+}

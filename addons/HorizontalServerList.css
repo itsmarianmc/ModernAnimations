@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+                    Horizontal Server List
+---------------------------------------------------------------*/
+
+/* Server selected pill */
+.containerDefault_c69b6d {
+	transition: transform var(--transition-time) var(--ease-in-out),
+				width var(--transition-time) var(--ease-in-out);
+}
+
+/* Remove to set to bottom */
+.pill_e5445c.wrapper__58105 {
+	transform: translateX(67.5px) rotate(180deg) !important;
+}
+
+.listItem__650eb:hover .pill_e5445c.wrapper__58105 {
+	transform: translateX(60px) rotate(180deg) !important;
+	right: 100px !important;
+}
