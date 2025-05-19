@@ -1,4 +1,4 @@
-<img width=800 src="https://raw.githubusercontent.com/itsmarianmc/ModernAnimations/raw/master/assets/preview.png">
+<img width=800 src="https://raw.githubusercontent.com/itsmarianmc/ModernAnimations/refs/heads/main/assets/preview.png">
 
 # ModernAnimations
 More modern, better and smoother animations that make your Discord client more enjoyable to use.
