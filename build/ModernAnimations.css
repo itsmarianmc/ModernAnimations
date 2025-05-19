@@ -1,0 +1,174 @@
+
+/*--------------------------------------------------------------
+                           Transitions
+---------------------------------------------------------------*/
+* {
+	transition: background-color var(--transition-time) var(--ease-in-out),
+				border-color var(--transition-time) var(--ease-in-out),
+				box-shadow var(--transition-time) var(--ease-in-out),
+				padding var(--transition-time) var(--ease-in-out),
+				margin var(--transition-time) var(--ease-in-out);
+}
+
+/*--------------------------------------------------------------
+                           Animations
+---------------------------------------------------------------*/
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-up-delay {
+
+	0%,
+	50% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes callTransformIn {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes message-appear {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes peopleListHoverEffect {
+	0% {
+		scale: 1;
+	} 100% {
+		scale: 1.01;
+	}
+}
+
+/*--------------------------------------------------------------
+                          Start Page
+---------------------------------------------------------------*/
+
+/* Chats */
+.interactive_bf202d:hover,
+.channel__972a0.dm__972a0.container_e45859 {
+	margin-left: 10px;
+}
+
+/* People List */
+.peopleColumn__133bf {
+	animation: slide-up 0.4s var(--ease-out-back);
+	animation-fill-mode: both;
+	animation-delay: calc(var(--index, 0) * 0.05s);
+	transition: transform 0.5s ease-in-out;
+}
+
+.peopleListItem_cc6179, .itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984 {
+	transition: transform 0.25s ease !important;
+}
+
+.peopleListItem_cc6179:hover, .itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984:hover {
+	transform: scale(1.01);
+}
+
+/* Acitvity on load */
+.itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984 {
+	animation: slide-up-delay 0.6s var(--ease-out-back);
+}
+
+.listItem__650eb {
+	transition: transform 0.25s ease;
+}
+
+.listItem__650eb:hover {
+	transform: scale(1.125);
+}
+
+.listItem__650eb:hover .pill_e5445c.wrapper__58105 {
+	left: 4px;
+}
+
+/*--------------------------------------------------------------
+                           Chats
+---------------------------------------------------------------*/
+
+/* Chat Hover */
+.interactive_bf202d.interactive__972a0 {
+	transition: margin-left var(--transition-time) var(--ease-in-out),
+				width var(--transition-time) var(--ease-in-out);
+}
+
+.interactive_bf202d.interactive__972a0:hover {
+	margin-left: 10px;
+	width: calc(100% - 10px);
+}
+
+/* Profile in Chat */
+.user-profile-sidebar,
+.custom-user-profile-theme,
+.user-profile-sidebar.custom-user-profile-theme {
+	animation: slide-up 0.6s var(--ease-out-back);
+}
+
+/* Hover Animation for DM entries */
+.channel-2QD9_O {
+	will-change: transform !important;
+	transition: transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+}
+
+.channel-2QD9_O:hover {
+	transform: translateX(10px) !important;
+}
+
+/* Call */
+.wrapper_cb9592.minimum_cb9592 {
+	animation: callTransformIn 0.125s ease;
+}
+
+/* Message Animation */
+.messageListItem__5126c {
+	transform-origin: center left;
+	animation: message-appear 0.3s var(--ease-out-back);
+}
+
+/*--------------------------------------------------------------  
+                      Third Party Contents
+
+ Please note that third-party content can be updated or deleted
+   at any time. ModernAnimations has no control over this and
+ reserves the right not to change or remove certain or specific
+                           content.
+---------------------------------------------------------------*/
+
+/* ReadAllNotificationsButton */
+.vc-ranb-button.button__201d5.lookBlank__201d5.sizeMin__201d5.grow__201d5 {
+	transition: transform var(--transition-time) var(--ease-in-out);
+}
+
+.vc-ranb-button.button__201d5.lookBlank__201d5.sizeMin__201d5.grow__201d5:hover {
+	transform: scale(1.05);
+}
