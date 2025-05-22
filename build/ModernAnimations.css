@@ -3,10 +3,10 @@
 ---------------------------------------------------------------*/
 * {
 	transition: background-color var(--transition-time) var(--ease-in-out),
-				border-color var(--transition-time) var(--ease-in-out),
-				box-shadow var(--transition-time) var(--ease-in-out),
-				padding var(--transition-time) var(--ease-in-out),
-				margin var(--transition-time) var(--ease-in-out);
+			border-color var(--transition-time) var(--ease-in-out),
+			box-shadow var(--transition-time) var(--ease-in-out),
+			padding var(--transition-time) var(--ease-in-out),
+			margin var(--transition-time) var(--ease-in-out);
 }
 
 /*--------------------------------------------------------------
@@ -319,4 +319,19 @@
 .messageListItem__5126c {
 	transform-origin: center left;
 	animation: message-appear 0.3s var(--ease-out-back);
+}
+
+/*--------------------------------------------------------------
+                           Settings
+---------------------------------------------------------------*/
+.item_b3f026.themed_b3f026, .item_b3f026.selected_b3f026.themed_b3f026 {
+	transition: transform var(--transition-time) var(--ease-in-out) !important;
+}
+
+.item_b3f026.selected_b3f026.themed_b3f026 {
+	transform: scale(1.05);
+}
+
+.item_b3f026.themed_b3f026:hover {
+	transform: scale(1.05);
 }
