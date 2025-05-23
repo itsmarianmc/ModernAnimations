@@ -7,7 +7,7 @@ More modern, better and smoother animations that make your Discord client more e
 
 <!-- Installation -->
 # Install
-## Vencord
+## Vencord/BetterDiscord
 - Paste the downloaded file into ```%appdata%\Vencord\themes```
 - Open the Vencord **Themes** Tab inside the Discord settings
 - Go to the **Themes** tab
