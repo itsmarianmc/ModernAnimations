@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+                     Custom Windows Buttons
+---------------------------------------------------------------*/
+.winButtons_c38106 {
+	left: -10px;
+	right: auto;
+	display: flex;
+	gap: 15px;
+	z-index: 1000;
+	position: relative;
+}
+
+/* Disabling labels */
+.winButton_c38106.winButtonMinMax_c38106::after {
+	display: none;
+}
+
+.winButton_c38106.winButtonClose_c38106.winButton_c38106::after {
+	display: none;
+}
+
+/* Custom Button Height */
+.winButtons_c38106.winButtonsWithDivider_c38106 {
+	height: 32px;
+}
+
+/* Button Style */
+.winButton_c38106 {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: gray;
+	transition: transform 0.15s ease;
+}
+
+/* Hide Windows Button */
+.winButton_c38106 svg {
+  	display: none !important;
+}
+
+/* MacOS Buttons */
+.winButtonClose_c38106 {
+	background-color: #fd5754;
+	background-image: url('https://raw.githubusercontent.com/itsmarianmc/ModernAnimations/refs/heads/main/build/macOs_betteranimations_close.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.winButton_c38106[aria-label="Minimize"] {
+	background-color: #febb40;
+	background-image: url('https://raw.githubusercontent.com/itsmarianmc/ModernAnimations/refs/heads/main/build/macOs_betteranimations_minimize.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.winButton_c38106[aria-label="Maximize"] {
+	background-color: #34c848;
+	background-image: url('https://raw.githubusercontent.com/itsmarianmc/ModernAnimations/refs/heads/main/build/macOs_betteranimations_maximize.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+/* Animation */
+.winButton_c38106:hover {
+  	transform: scale(1.15);
+}
