@@ -265,6 +265,11 @@
 	transform: translateX(10px) !important;
 }
 
+/* Close DM */
+.closeButton__972a0:hover > div > .closeIcon__972a0 > path {
+	fill: #f38ba8;
+}
+
 /* User joined */
 .iconSize__235ca[style*="8b9de960da063cb9.svg"] {
 	animation: moveLtR-gA 1s infinite;
@@ -333,5 +338,20 @@
 }
 
 .item_b3f026.themed_b3f026:hover {
+	transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------
+                           Global
+---------------------------------------------------------------*/
+.iconWrapper__9293f.clickable__9293f, .avatarWrapper__37e49, .actionButton_f8fa06, button.button_fb7f94.icon_fb7f94.banner_fb7f94.button__201d5.lookFilled__201d5, .button__6af3a.sm__6af3a.secondary__6af3a, .closeButton__972a0 {
+	transition: transform var(--transition-time) var(--ease-in-out) !important;
+}
+
+.iconWrapper__9293f.clickable__9293f:hover, button.button_fb7f94.icon_fb7f94.banner_fb7f94.button__201d5.lookFilled__201d5:hover {
+	transform: scale(1.1);
+}
+
+.avatarWrapper__37e49:hover, .actionButton_f8fa06:hover, .button__6af3a.sm__6af3a.secondary__6af3a:hover {
 	transform: scale(1.05);
 }
