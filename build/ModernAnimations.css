@@ -186,7 +186,7 @@
 
 .peopleListItem_cc6179,
 .itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984 {
-	transition: transform 0.25s ease !important;
+	transition: var(--transition-m) !important;
 }
 
 .peopleListItem_cc6179:hover,
@@ -200,13 +200,13 @@
 }
 
 .listItem__650eb {
-	transition: transform 0.25s ease;
+	transition: var(--transition-m) !important;
 }
 
 /* Main Panel */
 .button__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645,
 .button__67645.redGlow__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645 {
-	transition: transform var(--transition-time) var(--ease-in-out);
+	transition: var(--transition-m);
 }
 
 .button__67645.enabled__67645.button__201d5.lookBlank__201d5.colorBrand__201d5.grow__201d5.button__67645:hover,
@@ -226,7 +226,7 @@
 /* Server Channels */
 .containerDefault_c69b6d,
 .listItem__650eb {
-	transition: transform var(--transition-time) var(--ease-in-out),
+	transition: var(--transition-m),
 				width var(--transition-time) var(--ease-in-out);
 }
 
@@ -238,7 +238,7 @@
 /* Server List */
 .listItem__650eb > div:nth-child(2),
 .tutorialContainer__650eb .listItem__650eb .listItemWrapper__91816 {
-	transition: transform var(--transition-time) var(--ease-in-out) !important;
+	transition: var(--transition-m) !important;
 }
 
 .listItem__650eb:hover > div:nth-child(2),
@@ -258,7 +258,7 @@
 /* Hover Animation for DM entries */
 .channel-2QD9_O {
 	will-change: transform !important;
-	transition: transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+	transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 .channel-2QD9_O:hover {
@@ -272,27 +272,27 @@
 
 /* User joined */
 .iconSize__235ca[style*="8b9de960da063cb9.svg"] {
-	animation: moveLtR-gA 1s infinite;
+	animation: moveLtR-gA 1s var(--inf);
 }
 
 /* User left */
 .iconSize__235ca[style*="53e42368b1409f1a.svg"] {
-	animation: moveLtR-rA 1s infinite;
+	animation: moveLtR-rA 1s var(--inf);
 }
 
 /* Active Call */
 .iconSize__235ca[style*="61ccab047dad737a.svg"] {
-	animation: phoneRing 1s infinite;
+	animation: phoneRing 1s var(--inf);
 }
 
 /* Call History */
 .iconSize__235ca[style*="6f076a64de25de4b.svg"] {
-	animation: hangUpMotion 5s infinite;
+	animation: hangUpMotion 5s var(--inf);
 }
 
 /* Server Booster */
 .icon__9f20a {
-	animation: boosterPulse 1.2s ease-in-out infinite;
+	animation: boosterPulse 1.2s ease-in-out var(--inf);
 	transform-origin: center;
 	color: var(--booster-main);
 }
@@ -330,7 +330,7 @@
                            Settings
 ---------------------------------------------------------------*/
 .item_b3f026.themed_b3f026, .item_b3f026.selected_b3f026.themed_b3f026 {
-	transition: transform var(--transition-time) var(--ease-in-out) !important;
+	transition: var(--transition-m) !important;
 }
 
 .item_b3f026.selected_b3f026.themed_b3f026 {
@@ -345,7 +345,7 @@
                            Global
 ---------------------------------------------------------------*/
 .iconWrapper__9293f.clickable__9293f, .avatarWrapper__37e49, .actionButton_f8fa06, button.button_fb7f94.icon_fb7f94.banner_fb7f94.button__201d5.lookFilled__201d5, .button__6af3a.sm__6af3a.secondary__6af3a, .closeButton__972a0 {
-	transition: transform var(--transition-time) var(--ease-in-out) !important;
+	transition: var(--transition-m) !important;
 }
 
 .iconWrapper__9293f.clickable__9293f:hover, button.button_fb7f94.icon_fb7f94.banner_fb7f94.button__201d5.lookFilled__201d5:hover {
@@ -355,3 +355,26 @@
 .avatarWrapper__37e49:hover, .actionButton_f8fa06:hover, .button__6af3a.sm__6af3a.secondary__6af3a:hover {
 	transform: scale(1.05);
 }
+
+/*
+	Copyright © 2025 ModernAnimations via itsmarianmc
+	All rights reserved.
+
+	More information at: https://projects.itsmarian.is-a.dev/bd-vc-addons/modernanimations
+
+	License: MIT License
+	For more details on the license and disclaimers, see:
+	https://opensource.org/licenses/MIT
+
+	Disclaimer:
+	This software is provided without express or implied warranties,
+	including, but not limited to, the warranty of merchantability,
+	fitness for a particular purpose, and non-infringement of third-party rights.
+	In no event shall the authors or copyright holders be liable for any claims, damages, or other
+	liabilities, whether in an action of contract, tort, or
+	otherwise.
+
+	Contact:
+	For questions, feedback, or support, please contact us by email at:
+	business.itsmarian@gmail.com
+*/
